@@ -231,7 +231,7 @@ const UsersTable = () => {
 					border: '1px solid #f0f0f0',
 				}}
 			/>
-			{selectedUser.name && <UserDetails user={selectedUser} />}
+			{selectedUser.firstName && <UserDetails user={selectedUser} />}
 		</>
 	)
 }
