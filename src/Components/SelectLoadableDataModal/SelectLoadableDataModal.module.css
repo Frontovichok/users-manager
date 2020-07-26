@@ -1,0 +1,9 @@
+.modal {
+	text-align: center;
+}
+.modal :global .ant-modal-footer {
+	text-align: center;
+}
+.description {
+	font-size: 17px;
+}

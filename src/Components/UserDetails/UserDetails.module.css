@@ -1,0 +1,17 @@
+.title {
+	text-align: center;
+}
+.userDetailsContainer {
+	padding: 10px;
+	text-align: left;
+}
+.descriptionTextarea {
+	resize: auto;
+	max-height: 200px;
+	max-width: 100%;
+	min-width: 400px;
+	height: 100px;
+}
+.detailItem {
+	text-decoration: underline;
+}

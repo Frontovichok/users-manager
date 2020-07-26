@@ -1,0 +1,10 @@
+.rowCustomStyle:hover {
+	cursor: pointer;
+	background-color: #defff1;
+}
+.rowCustomStyle.active {
+	background-color: #bbf6d0;
+}
+:global .ant-row {
+	text-align: left;
+}

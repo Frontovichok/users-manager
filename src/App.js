@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import './App.css'
+import UsersTable from './Components/UsersTable/UsersTable'
+import SelectLoadableDataModal from './Components/SelectLoadableDataModal/SelectLoadableDataModal'
+import { LoadableDataProvider } from './context/loadableDataContext'
+import { ConfigProvider } from 'antd'
+import ruRu from 'antd/es/locale/ru_RU'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<ConfigProvider locale={ruRu}>
+			<LoadableDataProvider>
+				<div className="App">
+					<SelectLoadableDataModal />
+					<h1>Тестовое задание</h1>
+					<div className="table-wrapper">
+						<UsersTable />
+					</div>
+				</div>
+			</LoadableDataProvider>
+		</ConfigProvider>
+	)
 }
 
-export default App;
+export default App

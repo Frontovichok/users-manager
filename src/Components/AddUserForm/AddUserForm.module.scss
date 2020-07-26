@@ -1,0 +1,91 @@
+$field-sizes: (
+	1: 8%,
+	2: 22%,
+	3: 22%,
+	4: 28%,
+	5: 20%,
+);
+@each $field-number, $field-size in $field-sizes {
+	.fieldsContainer .fieldContainer:nth-child(#{$field-number}) {
+		flex-basis: calc(#{$field-size} + 2.3em);
+	}
+}
+.formContainer {
+	padding: 15px 0px;
+	border: 1px solid #f0f0f0;
+	border-bottom: unset;
+}
+.fieldsContainer {
+	display: flex;
+	flex-direction: row;
+	padding-bottom: 10px;
+	transition: opacity 0.2s linear;
+
+	&.exited {
+		display: none;
+	}
+	&.exiting {
+		opacity: 0;
+	}
+	&.entering {
+		opacity: 0;
+	}
+	&.entered {
+		opacity: 1;
+	}
+	.fieldContainer {
+		padding: 16px;
+
+		.inputForm {
+			width: 100%;
+			border: unset;
+			border-bottom: 1px solid #767676;
+			&:focus {
+				outline: none;
+			}
+		}
+		.inputForm.error {
+			border-bottom: 1px solid #f96969;
+		}
+	}
+}
+
+.submitButton {
+	padding: 6px 22px;
+	font-size: 15px;
+	color: white;
+	background-color: #38d46d;
+	font-family: arial;
+	border-radius: 5px;
+	border: none;
+	box-shadow: 0 1px 3px 0 #008a114d;
+	&:hover {
+		cursor: pointer;
+		background-color: #31c563;
+	}
+	&:focus {
+		outline: none;
+	}
+}
+.outlineButton {
+	padding: 6px 22px;
+	font-size: 15px;
+	font-family: arial;
+	border-radius: 5px;
+	border: none;
+	border: 1px solid #38d46d;
+	background-color: transparent;
+	color: #2bbf5d;
+	margin-right: 10px;
+	&:hover {
+		cursor: pointer;
+		background-color: #f0fff2;
+	}
+	&:focus {
+		outline: none;
+	}
+	&:disabled {
+		border: 1px solid #86b696;
+		color: #86b696;
+	}
+}
