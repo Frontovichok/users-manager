@@ -4,7 +4,7 @@ Screenshot:
 For run app in development mode:
 
 ```bash
-git clone git@github.com:Frontovichok/contacts-app.git
+git clone https://github.com/Frontovichok/users-manager.git
 yarn install
 yarn start
 ```
